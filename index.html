@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <!--
     ============================================================
     ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
@@ -33,13 +34,16 @@
                  - Active state indication
             -->
             <div class="nav__logo">
-                <a href="#home">[Your Name]</a>
+                <a href="#home">SHADRECK MWALE</a>
             </div>
-            <ul class="nav__menu">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
+            <button class="nav__toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul id="nav-menu" class="nav__menu" role="menubar">
+                <li role="none"><a role="menuitem" href="#home">Home</a></li>
+                <li role="none"><a role="menuitem" href="#about">About</a></li>
+                <li role="none"><a role="menuitem" href="#projects">Projects</a></li>
+                <li role="none"><a role="menuitem" href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -55,7 +59,7 @@
                  - Consider using Flexbox for layout
             -->
             <div class="hero__content">
-                <h1>Your Name</h1>
+                <h1>SHADRECK MWALE</h1>
                 <p class="hero__tagline">
                     <!-- TODO: Add your professional tagline -->
                     Web Developer | Designer | Problem Solver
@@ -78,30 +82,20 @@
                 <h2>About Me</h2>
                 <div class="about__content">
                     <div class="about__image">
-                        <!-- TODO: Add your profile image -->
-                        <img src="images/profile-placeholder.jpg" alt="Profile photo of [Your Name]">
+                        <img src="shad.jpeg" alt="Profile photo of SHADRECK MWALE">
                     </div>
                     <div class="about__text">
-                        <p>
-                            <!-- TODO: Write your professional bio (150+ words)
-                                 Include:
-                                 - Your background
-                                 - Your interests in web development
-                                 - Your goals
-                                 - What makes you unique
-                            -->
-                            [Your professional bio goes here. Write at least 150 words about yourself,
-                            your background, your passion for web development, and your goals.
-                            This is your opportunity to introduce yourself to potential employers or clients.]
-                        </p>
+                        <p>Welcome to my portfolio! I am a student learning web development and modern CSS layout techniques.</p>
+                        <p>This page demonstrates Flexbox and CSS Grid layouts, along with responsive design using media queries.</p>
+                        <p>I am passionate about creating clean, accessible, and responsive web experiences.</p>
                         <h3>Skills</h3>
                         <ul class="skills-list">
-                            <!-- TODO: Add your skills -->
                             <li>HTML5</li>
                             <li>CSS3</li>
-                            <li>JavaScript</li>
+                            <li>Flexbox</li>
+                            <li>CSS Grid</li>
                             <li>Responsive Design</li>
-                            <!-- Add more skills -->
+                            <li>JavaScript</li>
                         </ul>
                     </div>
                 </div>
@@ -120,58 +114,41 @@
             <div class="container">
                 <h2>My Projects</h2>
                 <div class="projects__grid">
-                    <!-- Project Card 1 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project1-placeholder.jpg" alt="Screenshot of Project 1">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 1 screenshot">
                         <div class="project-card__content">
-                            <h3>Project Title 1</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3>Project One</h3>
+                            <p>A responsive portfolio website built with HTML and CSS. Features modern layout techniques and accessibility best practices.</p>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="#" class="btn btn--small">View Project</a>
+                                <a href="#" class="btn btn--small btn--outline">Source</a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project Card 2 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project2-placeholder.jpg" alt="Screenshot of Project 2">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 2 screenshot">
                         <div class="project-card__content">
-                            <h3>Project Title 2</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3>Project Two</h3>
+                            <p>An interactive web application showcasing JavaScript fundamentals and DOM manipulation techniques.</p>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="https://github.com/unza-cs-courses/lab03-layout-shadd05" class="btn btn--small">View Project</a>
+                                <a href="https://github.com/unza-cs-courses/lab03-layout-shadd05" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
 
-                    <!-- Project Card 3 -->
                     <article class="project-card">
-                        <!-- TODO: Replace with your project -->
-                        <img src="images/project3-placeholder.jpg" alt="Screenshot of Project 3">
+                        <img src="https://via.placeholder.com/400x250" alt="Project 3 screenshot">
                         <div class="project-card__content">
-                            <h3>Project Title 3</h3>
-                            <p>
-                                Brief description of your project. What technologies did you use?
-                                What problem does it solve?
-                            </p>
+                            <h3>Project Three</h3>
+                            <p>A full-stack web application with database integration and user authentication features.</p>
                             <div class="project-card__links">
-                                <a href="#" class="btn btn--small">Live Demo</a>
-                                <a href="#" class="btn btn--small btn--outline">GitHub</a>
+                                <a href="https://github.com/unza-cs-courses/lab02-css-shadd05" class="btn btn--small">View Project</a>
+                                <a href="https://github.com/unza-cs-courses/lab02-css-shadd05" class="btn btn--small btn--outline">GitHub</a>
                             </div>
                         </div>
                     </article>
-
-                    <!-- TODO: Add more project cards if desired -->
                 </div>
             </div>
         </section>
@@ -191,50 +168,33 @@
             -->
             <div class="container">
                 <h2>Contact Me</h2>
-                <form class="contact__form" action="#" method="POST">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            name="name"
-                            required
-                            placeholder="Your Name"
-                            minlength="2"
-                        >
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <h3>Get in Touch</h3>
+                        <p>Feel free to reach out for collaborations or just a friendly chat.</p>
+                        <ul class="contact-list">
+                            <li>Email: shadrakemwale602@gmail.com</li>
+                            <li>Location: Lusaka, ZAMBIA</li>
+                            <li>GitHub: github.com/shadd05</li>
+                        </ul>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            name="email"
-                            required
-                            placeholder="your.email@example.com"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            name="subject"
-                            placeholder="What is this regarding?"
-                        >
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Message</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            required
-                            rows="5"
-                            placeholder="Your message..."
-                            minlength="10"
-                        ></textarea>
-                    </div>
-                    <button type="submit" class="btn btn--primary">Send Message</button>
-                </form>
+                    <form class="contact__form" action="#" method="POST">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required minlength="2" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required rows="5" minlength="10" placeholder="Your message..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn--primary">Send Message</button>
+                    </form>
+                    <div id="form-status" class="form-status" aria-live="polite"></div>
+                </div>
             </div>
         </section>
     </main>
@@ -248,14 +208,15 @@
              - Back to top link (optional)
         -->
         <div class="container">
-            <p>&copy; 2025 [Your Name]. All rights reserved.</p>
+            <p>&copy; 2026 SHADRECK MWALE. All rights reserved.</p>
             <nav class="footer__social">
-                <!-- TODO: Add your social media links -->
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                <a href="https://github.com/shadd05" aria-label="GitHub">GitHub</a>
+                <a href="https://www.linkedin.com/in/shadreck-mwale-b9b40a326/" aria-label="LinkedIn">LinkedIn</a>
                 <a href="#" aria-label="Twitter">Twitter</a>
             </nav>
+            <p class="back-to-top"><a href="#home">Back to top</a></p>
         </div>
     </footer>
+    <script src="js/main.js" defer></script>
 </body>
 </html>

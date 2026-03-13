@@ -1,388 +1,133 @@
-/*
-============================================================
-ASSIGNMENT 1: RESPONSIVE PORTFOLIO WEBSITE
-CSC4035 Web Programming and Technologies
-
-Instructions:
-1. Complete all TODO sections
-2. Use CSS custom properties (variables) for colors and spacing
-3. Use Flexbox for at least one layout component
-4. Use CSS Grid for at least one layout component
-5. Implement mobile-first responsive design
-6. Add at least 3 breakpoints (mobile, tablet, desktop)
-
-DO NOT use CSS frameworks (Bootstrap, Tailwind, etc.)
-============================================================
-*/
-
 /* ============================================================
-   CSS CUSTOM PROPERTIES (VARIABLES)
-   TODO: Define your color scheme and spacing variables
-   ============================================================ */
-:root {
-    /* Colors - TODO: Customize your color palette */
-    --color-primary: /* Your primary color */;
-    --color-primary-dark: /* Darker shade */;
-    --color-secondary: /* Secondary color */;
-    --color-text: /* Main text color */;
-    --color-text-light: /* Lighter text */;
-    --color-background: /* Page background */;
-    --color-background-alt: /* Alternate background */;
-    --color-border: /* Border color */;
-
-    /* Typography - TODO: Define your font sizes */
-    --font-family: /* Your font stack */;
-    --font-size-base: /* Base size, e.g., 16px */;
-    --font-size-sm: /* Small text */;
-    --font-size-lg: /* Large text */;
-    --font-size-xl: /* Extra large */;
-    --font-size-2xl: /* Headings */;
-    --font-size-3xl: /* Large headings */;
-
-    /* Spacing - TODO: Define spacing scale */
-    --spacing-xs: /* Extra small */;
-    --spacing-sm: /* Small */;
-    --spacing-md: /* Medium */;
-    --spacing-lg: /* Large */;
-    --spacing-xl: /* Extra large */;
-
-    /* Layout */
-    --max-width: /* Container max-width */;
-    --border-radius: /* Default border radius */;
-
-    /* Transitions */
-    --transition-fast: /* Fast transition */;
-    --transition-normal: /* Normal transition */;
-}
-
-/* ============================================================
-   CSS RESET / BASE STYLES
-   TODO: Add your CSS reset
-   ============================================================ */
-*,
-*::before,
-*::after {
-    /* TODO: box-sizing, margin, padding reset */
-}
-
-html {
-    /* TODO: scroll-behavior, font-size */
-}
-
-body {
-    /* TODO: font-family, color, background-color, line-height */
-}
-
-img {
-    /* TODO: Make images responsive */
-}
-
-a {
-    /* TODO: Link styles */
-}
-
-a:hover {
-    /* TODO: Link hover state */
-}
-
-ul {
-    /* TODO: List reset */
-}
-
-/* ============================================================
-   UTILITY CLASSES
-   TODO: Create reusable utility classes
-   ============================================================ */
-.container {
-    /* TODO: Container styles
-     * - width: 100%
-     * - max-width
-     * - margin: 0 auto
-     * - padding
-     */
-}
-
-/* ============================================================
-   BUTTONS
-   TODO: Style your buttons
-   ============================================================ */
-.btn {
-    /* TODO: Base button styles
-     * - display, padding
-     * - border, border-radius
-     * - font-size, font-weight
-     * - text-align, cursor
-     * - transition
-     */
-}
-
-.btn--primary {
-    /* TODO: Primary button (filled) */
-}
-
-.btn--primary:hover {
-    /* TODO: Primary button hover */
-}
-
-.btn--outline {
-    /* TODO: Outline button (bordered) */
-}
-
-.btn--outline:hover {
-    /* TODO: Outline button hover */
-}
-
-.btn--small {
-    /* TODO: Small button variant */
-}
-
-/* ============================================================
-   HEADER & NAVIGATION
-   TODO: Style navigation using Flexbox
-   Requirements:
-   - Fixed or sticky header
-   - Logo on left, nav links on right
-   - Mobile-friendly (links stack or hamburger menu)
-   ============================================================ */
-.header {
-    /* TODO: Style the header
-       Consider: position, background, padding, box-shadow, z-index */
-}
-
-.nav {
-    /* TODO: Use Flexbox for navigation layout
-     * - display: flex
-     * - justify-content: space-between
-     * - align-items: center
-     */
-}
-
-.nav__logo a {
-    /* TODO: Logo styles */
-}
-
-.nav__menu {
-    /* TODO: Style navigation menu
-       Mobile: Stack vertically or hide
-       Desktop: Horizontal with Flexbox */
-}
-
-.nav__menu a {
-    /* TODO: Navigation link styles */
-}
-
-.nav__menu a:hover {
-    /* TODO: Navigation link hover */
-}
-
-/* ============================================================
-   HERO SECTION
-   TODO: Style hero section
-   ============================================================ */
-.hero {
-    /* TODO: Style hero section
-       Consider: min-height, background, centering content
-       Use Flexbox for centering */
-}
-
-.hero__content h1 {
-    /* TODO: Style your name */
-}
-
-.hero__tagline {
-    /* TODO: Style tagline */
-}
-
-/* ============================================================
-   ABOUT SECTION
-   TODO: Style about section using CSS Grid or Flexbox
-   ============================================================ */
-.about {
-    /* TODO: Section padding */
-}
-
-.about h2 {
-    /* TODO: Section heading */
-}
-
-.about__content {
-    /* TODO: Use CSS Grid or Flexbox for layout
-       Mobile: Stack image above text
-       Desktop: Side by side */
-}
-
-.about__image img {
-    /* TODO: Style profile image */
-}
-
-.about__text p {
-    /* TODO: Paragraph styles */
-}
-
-.about__text h3 {
-    /* TODO: Subheading styles */
-}
-
-.skills-list {
-    /* TODO: Style skills list
-       Consider: Flexbox, tags/badges style */
-}
-
-.skills-list li {
-    /* TODO: Individual skill badge */
-}
-
-/* ============================================================
-   PROJECTS SECTION
-   TODO: Style projects using CSS Grid
-   ============================================================ */
-.projects {
-    /* TODO: Section styling */
-}
-
-.projects h2 {
-    /* TODO: Section heading */
-}
-
-.projects__grid {
-    /* TODO: Use CSS Grid for project cards
-       Mobile: 1 column
-       Tablet: 2 columns
-       Desktop: 3 columns */
-}
-
-.project-card {
-    /* TODO: Style project cards
-     * - background, border-radius, overflow
-     * - box-shadow, transition
-     */
-}
-
-.project-card:hover {
-    /* TODO: Card hover effect */
-}
-
-.project-card img {
-    /* TODO: Project image */
-}
-
-.project-card__content {
-    /* TODO: Card content area */
-}
-
-.project-card__content h3 {
-    /* TODO: Project title */
-}
-
-.project-card__content p {
-    /* TODO: Project description */
-}
-
-.project-card__links {
-    /* TODO: Links container (Flexbox) */
-}
-
-/* ============================================================
-   CONTACT SECTION
-   TODO: Style contact form
-   ============================================================ */
-.contact {
-    /* TODO: Section styling */
-}
-
-.contact h2 {
-    /* TODO: Section heading */
-}
-
-.contact__form {
-    /* TODO: Style contact form
-       Consider: max-width, centering */
-}
-
-.form-group {
-    /* TODO: Form group spacing */
-}
-
-.form-group label {
-    /* TODO: Label styles */
-}
-
-.form-group input,
-.form-group textarea {
-    /* TODO: Style form inputs
-     * - width: 100%
-     * - padding, border, border-radius
-     * - font-family, font-size
-     * - transition
-     */
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    /* TODO: Focus state */
-}
-
-.form-group textarea {
-    /* TODO: Textarea specific styles */
-}
-
-/* ============================================================
-   FOOTER
-   TODO: Style footer
-   ============================================================ */
-.footer {
-    /* TODO: Footer styling
-     * - background, color, padding
-     * - text-align
-     */
-}
-
-.footer .container {
-    /* TODO: Footer layout (Flexbox) */
-}
-
-.footer__social {
-    /* TODO: Social links container */
-}
-
-.footer__social a {
-    /* TODO: Social link styles */
-}
-
-.footer__social a:hover {
-    /* TODO: Social link hover */
-}
-
-/* ============================================================
-   RESPONSIVE BREAKPOINTS
-   TODO: Implement mobile-first responsive design
-
-   Start with mobile styles above, then add complexity
-   for larger screens below.
+   Responsive portfolio stylesheet (mobile-first)
    ============================================================ */
 
-/* Tablet (768px and up) */
-@media (min-width: 768px) {
-    /* TODO: Add tablet styles
-       - Adjust typography sizes
-       - Change layouts (Grid columns, Flexbox directions)
-       - Adjust spacing */
+:root{
+    --color-primary:#0A1931;
+    --color-primary-dark:#B3CFE5;
+    --color-secondary:#244c6a;
+    --color-text:#1A3D63;
+    --color-text-light:#1A3D63;
+    --color-background:#ffffff;
+    --color-background-alt:#f8fafc;
+    --color-border:#93baeb;
+
+    --font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    --font-size-base:16px;
+    --font-size-sm:0.875rem;
+    --font-size-lg:1.125rem;
+    --font-size-xl:1.5rem;
+
+    --spacing-xs:0.25rem;
+    --spacing-sm:0.5rem;
+    --spacing-md:1rem;
+    --spacing-lg:1.5rem;
+    --spacing-xl:2.5rem;
+
+    --max-width:1100px;
+    --border-radius:8px;
+    --transition-fast:150ms;
+    --transition-normal:250ms;
 }
 
-/* Desktop (1024px and up) */
-@media (min-width: 1024px) {
-    /* TODO: Add desktop styles
-       - Further layout adjustments
-       - Larger typography
-       - More spacing */
+/* Reset / base */
+*,*::before,*::after{box-sizing:border-box}
+html{font-size:var(--font-size-base);scroll-behavior:smooth}
+body{margin:0;font-family:var(--font-family);color:var(--color-text);background:var(--color-background);line-height:1.5}
+img{max-width:100%;height:auto;display:block}
+ul{margin:0;padding:0;list-style:none}
+a{color:var(--color-primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{position:static;left:0;top:0;background:#000;color:#fff;padding:0.5rem 1rem;z-index:999}
+
+.container{width:100%;max-width:var(--max-width);margin:0 auto;padding:0 var(--spacing-md)}
+
+/* Buttons */
+.btn{display:inline-block;padding:0.6rem 1rem;border-radius:6px;border:1px solid transparent;font-weight:600;cursor:pointer;transition:all var(--transition-fast) ease}
+.btn--primary{background:var(--color-primary);color:#fff}
+.btn--primary:hover{background:var(--color-primary-dark)}
+.btn--outline{background:transparent;border-color:var(--color-border);color:var(--color-text)}
+.btn--small{padding:0.35rem 0.6rem;font-size:var(--font-size-sm)}
+
+/* Header / Nav */
+.header{position:sticky;top:0;background:rgba(255,255,255,0.95);backdrop-filter:saturate(120%) blur(4px);border-bottom:1px solid var(--color-border);z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:0.75rem 0}
+.nav__logo a{font-weight:700;font-size:1.125rem;color:var(--color-text)}
+.nav__toggle{background:transparent;border:0;padding:0.5rem;display:flex;align-items:center;justify-content:center;cursor:pointer}
+.nav__toggle:focus{outline:2px solid var(--color-secondary);border-radius:6px}
+.hamburger{display:inline-block;width:22px;height:2px;background:var(--color-text);position:relative}
+.hamburger::before,.hamburger::after{content:"";position:absolute;left:0;width:22px;height:2px;background:var(--color-text);transition:transform var(--transition-normal) ease}
+.hamburger::before{top:-7px}
+.hamburger::after{top:7px}
+
+.nav__menu{display:flex;flex-direction:column;gap:0.25rem;padding:1rem;margin:0;background:var(--color-background);position:absolute;left:0;right:0;top:100%;box-shadow:0 6px 18px rgba(31,41,55,0.08);border-bottom-left-radius:8px;border-bottom-right-radius:8px;transform-origin:top;visibility:hidden;opacity:0;transform:scaleY(0.98);transition:opacity var(--transition-fast) ease,transform var(--transition-fast) ease}
+.nav__menu[aria-hidden="false"],.nav__menu.show{visibility:visible;opacity:1;transform:scaleY(1)}
+.nav__menu a{display:block;padding:0.5rem 0.75rem;color:var(--color-text);border-radius:6px}
+.nav__menu a.active{background:var(--color-background-alt);font-weight:600}
+
+/* Hero */
+.hero{padding:3.5rem 0;background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);display:flex;align-items:center}
+.hero__content{max-width:720px}
+.hero__content h1{font-size:1.875rem;margin:0 0 0.5rem}
+.hero__tagline{color:var(--color-text-light);margin:0 0 1rem}
+
+/* About */
+.about{padding:2.5rem 0}
+.about h2{margin-bottom:1rem;font-size:1.25rem}
+.about__content{display:grid;grid-template-columns:1fr;gap:1rem;align-items:start}
+.about__image img{width:200px;border-radius:12px;border:1px solid var(--color-border)}
+.about__text p{color:var(--color-text-light)}
+.skills-list{display:flex;flex-wrap:wrap;gap:0.5rem;margin-top:0.5rem}
+.skills-list li{background:var(--color-background-alt);padding:0.35rem 0.6rem;border-radius:999px;font-size:var(--font-size-sm)}
+
+/* Projects */
+.projects{padding:2.5rem 0}
+.projects__grid{display:grid;grid-template-columns:1fr;gap:1rem}
+.project-card{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--color-border);box-shadow:0 6px 18px rgba(15,23,42,0.03);transition:transform var(--transition-fast) ease}
+.project-card:hover{transform:translateY(-6px)}
+.project-card__content{padding:1rem}
+.project-card__links{display:flex;gap:0.5rem;margin-top:0.75rem}
+
+/* Contact */
+.contact{padding:2.5rem 0}
+.contact__form{max-width:720px;margin-top:0.5rem}
+.form-group{margin-bottom:0.75rem}
+.form-group label{display:block;margin-bottom:0.35rem;font-size:var(--font-size-sm)}
+.form-group input,.form-group textarea{width:100%;padding:0.6rem;border:1px solid var(--color-border);border-radius:8px;font-family:inherit}
+.form-group input:focus,.form-group textarea:focus{outline:2px solid rgba(11,110,253,0.12);border-color:var(--color-primary)}
+.form-status{margin-top:0.75rem;color:var(--color-primary)}
+
+/* Footer */
+.footer{background:var(--color-background-alt);padding:1.25rem 0;margin-top:2rem}
+.footer .container{display:flex;flex-direction:column;gap:0.5rem;align-items:center}
+.footer__social{display:flex;gap:0.5rem}
+.footer__social a{color:var(--color-text-light)}
+.back-to-top{margin-top:0.5rem}
+
+/* Tablet */
+@media(min-width:768px){
+    .nav__menu{position:static;visibility:visible;opacity:1;transform:none;background:transparent;box-shadow:none;flex-direction:row;padding:0}
+    .nav__toggle{display:none}
+    .nav{padding:1rem 0}
+    .about__content{grid-template-columns:220px 1fr;gap:1.5rem}
+    .projects__grid{grid-template-columns:repeat(2,1fr)}
+    .hero__content h1{font-size:2.25rem}
 }
 
-/* Large Desktop (1200px and up) */
-@media (min-width: 1200px) {
-    /* TODO: Add large desktop styles (optional) */
+/* Desktop */
+@media(min-width:1024px){
+    .projects__grid{grid-template-columns:repeat(3,1fr)}
+    .hero{padding:4.5rem 0}
+    .hero__content h1{font-size:2.75rem}
 }
 
-/* ============================================================
-   ADDITIONAL STYLES
-   TODO: Add any additional styles you need
-   ============================================================ */
+/* Large desktop */
+@media(min-width:1200px){
+    :root{--max-width:1300px}
+    .hero__content h1{font-size:3.25rem}
+    .projects__grid{grid-template-columns:repeat(4,1fr);gap:1.25rem}
+    .container{padding:0 2rem}
+}
+
